@@ -6,16 +6,31 @@
 body {
     height: 100vh;
  
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2em;
 }
+.names {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+h1 {
+    color: white;
+    font-weight: lighter;
+    font-size: 2em;
+    margin-right: 50px;
+    margin-top: 80px;
+    position: absolute;
+}
+
+
 
 
 .section1 {
     top: 0;
     left: 0;
     margin-top: -350px;
-    height: 144vh;
+    height: 140vh;
     width: 100%;
     background-size:cover;
     background-image: url("./background1.png");
@@ -53,8 +68,8 @@ body {
 }
 .person {
     
-   
-    margin-right: 300px;
+   transform: translateY(500px);
+    margin-left: 600px;
     z-index: 1000;
     
     transform: scale(.35);
@@ -63,6 +78,7 @@ body {
     animation: float 5s  ease-in-out, float1 5s infinite 5s ease-in-out;
    
 }
+
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 0%;
@@ -127,7 +143,8 @@ body {
 .big-nav {
     padding-right: 5px;
     margin-right: 1.4%;
-    
+    padding-top: 200px;
+    position: absolute;
     
     
 }
@@ -198,15 +215,86 @@ body {
 
 
   }
-  @media screen and (max-width: 550px) {
-      #loader {
-          margin-top: 70%;
-          margin-left: 100px;
-      }
 
+ 
+
+  @media screen and (max-width: 550px) {
+    .section1 {
+        background-position: initial;
+        height: 75vh;
+        background-repeat: none;
+        background-size: cover;
+    }
+.big-nav {
+    padding-right: 5px;
+    margin-right: 1.4%;
+    padding-top: 0px;
+    position: relative;
+
+
+}
+.person {
+
+
+    margin-left: 100px;
+    z-index: 1000;
+
+    transform: scale(.2);
+
+    position: relative;
+    animation: float 5s ease-in-out, float1 5s infinite 5s ease-in-out;
+}
+h1 {
+    color: white;
+    font-weight: lighter;
+    font-size: .8em;
+    margin-right: 25px;
+    margin-top: 40px;
+}
       .hide-bg-nav {
           visibility: hidden;
       }
+
+      .section2 p {
+          font-size: .5em;
+      }
+
+ @keyframes float {
+
+     100% {
+         transform: translateY(800px);
+         transform: scale(.5);
+         margin-top: 0px;
+
+     }
+
+     0% {
+         transform: translateY(100px);
+
+     }
+
+
+
+ }
+
+ @keyframes float1 {
+
+     100% {
+         margin-top: -175px;
+
+     }
+
+     50% {
+         margin-top: -150px;
+     }
+
+     0% {
+         margin-top: -175px;
+     }
+
+
+
+ }
   }
 
    @media screen and (max-width: 545px) {
