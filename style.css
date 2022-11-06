@@ -237,9 +237,9 @@ h1 {
 .person {
 
 
-    margin-left: 100px;
+    margin-left: 0px;
     z-index: 1000;
-
+    margin-bottom: 50px;
     transform: scale(.2);
 
     position: relative;
@@ -281,16 +281,16 @@ h1 {
  @keyframes float1 {
 
      100% {
-         margin-top: -175px;
+         margin-top: -300px;
 
      }
 
      50% {
-         margin-top: -150px;
+         margin-top: -270px;
      }
 
      0% {
-         margin-top: -175px;
+         margin-top: -300px;
      }
 
 
