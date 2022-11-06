@@ -35,6 +35,7 @@ h1 {
     background-size:cover;
     background-image: url("./background1.png");
     animation: hue 5s infinite steps(5);
+    --webkit-backface-visibility: hidden;
   
 
    
@@ -71,7 +72,7 @@ h1 {
    transform: translateY(500px);
     margin-left: 600px;
     z-index: 1000;
-    
+    --webkit-backface-visibility: hidden;
     transform: scale(.35);
     
      position: relative;
@@ -242,12 +243,12 @@ h1 {
     transform: scale(.2);
 
     position: relative;
-    animation: float 5s ease-in-out, float1 5s infinite 5s ease-in-out;
+    -webkit-animation-: float 5s ease-in-out, float1 5s infinite 5s ease-in-out;
 }
 h1 {
     color: white;
     font-weight: lighter;
-    font-size: .8em;
+    font-size: .5em;
     margin-right: 25px;
     margin-top: 40px;
 }
@@ -262,14 +263,14 @@ h1 {
  @keyframes float {
 
      100% {
-         transform: translateY(800px);
-         transform: scale(.5);
+         -webkit-transform: translateY(800px);
+         -webkit-transform: scale(.5);
          margin-top: 0px;
 
      }
 
      0% {
-         transform: translateY(100px);
+         -webkit-transform: translateY(100px);
 
      }
 
