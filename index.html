@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax</title>
+</head>
+<body>
+        <header>
+            
+        
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a class="nav-text" href="work.html">WORK</a>
+                    <a class="nav-text" href="about.html">ABOUT</a>
+                    <a class="nav-text" href="https://www.instagram.com/theschubertstudio/?hl=en">FOLLOW</a>
+                    <a class="nav-text" href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        
+            <span class="sm-nav" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;</span>
+        
+            <nav class="big-nav hide-bg-nav">
+                <ul>
+                    <li><a class="g-2 big-anc2" href="work.html">WORK</a></li>
+                    <li><a class="g-2 big-anc2" href="about.html">ABOUT</a></li>
+                    <li><a class="g-2 big-anc2" href="https://www.instagram.com/theschubertstudio/?hl=en">FOLLOW</a></li>
+                    <li><a class="g-2 big-anc2" href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+    <div class="section1">
+        
+        <img id="person"src="person1.png"class="person"/>
+    </div>
+
+    <div class="section2">
+        <p>Bibendum arcu vitae elementum curabitur vitae nunc sed. Ultricies lacus sed turpis tincidunt. Ultricies mi eget mauris
+        pharetra et ultrices neque ornare. Lorem donec massa sapien faucibus et. Quisque non tellus orci ac auctor augue. Lectus
+        urna duis convallis convallis tellus id interdum velit laoreet. Nec ultrices dui sapien eget mi proin. Vel facilisis
+        volutpat est velit egestas dui id ornare. Nullam vehicula ipsum a arcu cursus vitae congue mauris. Tellus at urna
+        condimentum mattis pellentesque. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo. Adipiscing at
+        in tellus integer feugiat scelerisque. Aliquet lectus proin nibh nisl condimentum id. Semper viverra nam libero justo
+        laoreet sit amet.
+        
+        Nibh nisl condimentum id venenatis a condimentum vitae. Nisi quis eleifend quam adipiscing. Sit amet risus nullam eget
+        felis eget nunc lobortis mattis. In eu mi bibendum neque egestas congue. Fermentum iaculis eu non diam phasellus
+        vestibulum lorem sed risus. Est ultricies integer quis auctor elit sed. Nulla facilisi nullam vehicula ipsum a. Ut
+        tristique et egestas quis ipsum suspendisse ultrices gravida. Posuere urna nec tincidunt praesent semper feugiat nibh
+        sed pulvinar. Pharetra vel turpis nunc eget lorem dolor sed. Quam quisque id diam vel quam elementum. Facilisi etiam
+        dignissim diam quis enim.
+        
+        Lectus nulla at volutpat diam ut. Amet est placerat in egestas. Integer quis auctor elit sed vulputate mi. Netus et
+        malesuada fames ac turpis egestas integer eget. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam.
+        Ultrices neque ornare aenean euismod. Enim diam vulputate ut pharetra sit amet aliquam. Elit at imperdiet dui accumsan
+        sit. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. A scelerisque purus semper eget duis at tellus at.
+        Accumsan in nisl nisi scelerisque eu. Elit scelerisque mauris pellentesque pulvinar. Egestas tellus rutrum tellus
+        pellentesque eu tincidunt tortor. Ut diam quam nulla porttitor massa. Vel elit scelerisque mauris pellentesque pulvinar
+        pellentesque habitant morbi tristique.</p>
+    </div>
+       
+    
+       <script>
+            let person = document.getElementById("person");
+        
+
+
+            window.addEventListener("scroll", function () {
+                let value = window.scrollY;
+                person.style.left = value  + 'px';
+                person.style.opacity = value + 'px';
+
+                //  hoop.classList.add("hoop-glitch");
+
+            });
+
+            function openNav() {
+                    document.getElementById("myNav").style.height = "100%";
+                }
+
+                function closeNav() {
+                    document.getElementById("myNav").style.height = "0%";
+                }
+
+
+        </script>
+</body>
+</html>

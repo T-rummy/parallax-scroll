@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+ 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
+
+.section1 {
+    top: 0;
+    left: 0;
+    margin-top: -350px;
+    height: 144vh;
+    width: 100%;
+    background-size:cover;
+    background-image: url("./background1.png");
+    animation: hue 5s infinite steps(5);
+  
+
+   
+   
+} 
+
+.corner {
+    top: 0;
+    margin-left: 0;
+    
+    height: 144vh;
+    width: 40%;
+    transform: translateX(-700px);
+    position: relative;
+    
+
+
+
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.section2 {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+.person {
+    
+   
+    margin-right: 300px;
+    z-index: 1000;
+    
+    transform: scale(.35);
+    
+     position: relative;
+    animation: float 5s  ease-in-out, float1 5s infinite 5s ease-in-out;
+   
+}
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    background: filter(blur(100px));
+    /* Black fallback color */
+
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.5s;
+    /* Transition effects on hover (color) */
+    
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+    color: rgba(241, 241, 241, .5);
+    text-decoration: line-through;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.big-nav {
+    padding-right: 5px;
+    margin-right: 1.4%;
+    
+    
+    
+}
+.big-anc2 {
+
+    color: white;
+    font-size: 2em;
+
+
+}
+
+.sm-nav {
+    margin: 50px 30px;
+    visibility: hidden;
+    color: white;
+    transform: scale(1.5);
+}
+
+
+ @keyframes hue {
+    0%, 100% {
+        background-image: url('./background1.png');
+    }
+    92.5%{
+        background-image: url('./background3.png');
+    }
+        95% {
+            background-image: url('./background4.png');
+        }
+                 97.5% {
+                     background-image: url('./background2.png');
+                 }
+       
+              
+    
+}  
+
+ @keyframes float {
+
+  100% {
+   transform: translateY(0);
+    transform: scale(.35);
+       
+  }
+  0% {
+    transform: translateY(300px);
+    
+  }
+
+
+
+ }
+
+  @keyframes float1 {
+
+      100% {
+         margin-top: 400px; 
+
+      }
+
+      50% {
+        margin-top: 350px;
+      }
+           0% {
+               margin-top: 400px;
+           }
+
+
+
+  }
+  @media screen and (max-width: 550px) {
+      #loader {
+          margin-top: 70%;
+          margin-left: 100px;
+      }
+
+      .hide-bg-nav {
+          visibility: hidden;
+      }
+  }
+
+   @media screen and (max-width: 545px) {
+
+       .sm-nav {
+           visibility: visible;
+       }
+
+       .img-size {
+           width: 101%;
+       }
+
+   }
+
+  @media screen and (max-height: 450px) {
+      .overlay a {
+          font-size: 20px
+      }
+
+      .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+      }
+  }
+
+ 
+
